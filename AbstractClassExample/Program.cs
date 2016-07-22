@@ -8,8 +8,12 @@ namespace AbstractClassExample
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
+            FullTimeEmployee fte = new FullTimeEmployee();
+            ID = 101;
+            FirstNmae
         }
-    }
+     }
+
 }
