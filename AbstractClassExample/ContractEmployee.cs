@@ -6,21 +6,15 @@ using System.Threading.Tasks;
 
 namespace AbstractClassExample
 {
-    public class ContractEmployee
+    public class ContractEmployee : BaseEmployee
     {
-        public int ID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int HourlyPay { get; set; }
-        public int TotalHour { get; set; }
-        public string GetFullName()
-        {
-            return this.FirstName + " " + this.LastName;
-        }
 
-        public int GetMonthlySalary()
+        public int HourlyPay { get; set; }
+        public int TotalHoursWorked { get; set; }
+
+        public override int GetMonthlySalary()
         {
-            return this.TotalHour * this.HourlyPay;
+            return this.TotalHoursWorked * this.HourlyPay;
         }
     }
 }
